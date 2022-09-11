@@ -6,9 +6,11 @@
 // <span id="text">Abracadabra!</span>
 
 const inputSlideBar = document.querySelector('#font-size-control')
-const textRef = document.querySelector('#text')
+const textRef = document.querySelector('#text') 
 
-inputSlideBar.addEventListener('change', handleFontChanges)
+textRef.style.fontSize = `${inputSlideBar.value}px`;
+
+inputSlideBar.addEventListener('input', handleFontChanges)
 
 function handleFontChanges() {
     textRef.style.fontSize = `${inputSlideBar.value}px`;
